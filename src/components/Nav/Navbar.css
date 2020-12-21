@@ -9,6 +9,7 @@
   border-bottom: 3.5px solid white;
   font-family: "UT-DTM-Mono";
   margin-bottom: 10px;
+  position: static;
 }
 
 .navbar {
