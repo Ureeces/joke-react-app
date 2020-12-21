@@ -43,7 +43,7 @@ const Auth = (props) => {
     passwordErrorMessage,
     cantSubmitPassword,
     clearPasswordInput,
-  ] = useChangeInputConfig("email");
+  ] = useChangeInputConfig("password");
 
   const [
     username,
@@ -52,7 +52,7 @@ const Auth = (props) => {
     usernameErrorMessage,
     cantSubmitUsername,
     clearUsernameInput,
-  ] = useChangeInputConfig("email");
+  ] = useChangeInputConfig("username");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -82,7 +82,7 @@ const Auth = (props) => {
         onChange={handleEmailChange}
       />{" "}
       <br />
-      {isLogin && (
+      {!isLogin && (
         <input
           type="text"
           label="Username"
@@ -102,7 +102,7 @@ const Auth = (props) => {
         onChange={handlePasswordChange}
       />{" "}
       <br />
-      <button type="submit">Submit</button>
+      <button type="submit">{buttonTitle}</button>
     </form>
   );
 };

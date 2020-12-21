@@ -35,7 +35,7 @@ const useFetchUsersAPI = (url) => {
     setIsMessageOpen(false);
   };
 
-  const handleAPICallButtonSubmit = (option = {}) => {
+  const handleAPICallButtonSubmit = (options = {}) => {
     setOptions(options);
     setIsLoading(true);
   };
@@ -68,6 +68,8 @@ const useFetchUsersAPI = (url) => {
       setResponse(response.data.message);
       setIsLoading(false);
     } catch (e) {
+      console.log(e.response);
+
       setError(e.response.data.message);
       setIsLoading(false);
     }

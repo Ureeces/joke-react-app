@@ -3,7 +3,7 @@ import { NavLink as Link } from "react-router-dom";
 
 import useLocalStorage from "../hooks/useLocalStorage";
 
-import AuthContext from "../context/AuthContext";
+import { AuthContext } from "../context/AuthContext";
 
 import "./Navbar.css";
 
@@ -18,12 +18,10 @@ const Navbar = () => {
   const isUserLoggedIn = user ? true : false;
 
   const navLinkPathOne = isUserLoggedIn ? "/home" : "/sign-in";
-  const navLinkDisplayOne = isUserLoggedIn ? `${user.username}` : "LOGIN";
+  const navLinkDisplayOne = isUserLoggedIn ? `${user.email}` : "LOGIN";
 
   const navLinkPathTwo = isUserLoggedIn ? "/logout" : "/sign-up";
   const navLinkDisplayTwo = isUserLoggedIn ? `LOGOUT` : "REGISTER";
-
-  const logoutFunc = isUserLoggedIn ? logout : null;
 
   useEffect(() => {
     let token = localStorage.getItem("jwtToken");
@@ -49,6 +47,8 @@ const Navbar = () => {
     localStorage.removeItem("jwtToken");
   };
 
+  const logoutFunc = isUserLoggedIn ? logout : null;
+
   return (
     <div id="nav-container">
       <ul className="navbar">
@@ -56,12 +56,12 @@ const Navbar = () => {
           <Link to="/joke">MAKE ME LAUGH</Link>
         </li>
         <li className="nav-item">
-          <Link exact to={navLinkPathOne} onClick={logoutFunc}>
+          <Link exact to={navLinkPathOne}>
             {navLinkDisplayOne}
           </Link>
         </li>
         <li className="nav-item">
-          <Link exact to={navLinkPathTwo}>
+          <Link exact to={navLinkPathTwo} onClick={logoutFunc}>
             {navLinkDisplayTwo}
           </Link>
         </li>
