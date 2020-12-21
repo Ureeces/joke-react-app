@@ -1,0 +1,29 @@
+#auth-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#auth-form input {
+  width: 170px;
+  border-style: none;
+  border-bottom: solid 2px #ccc;
+  margin: 10px;
+  margin-top: 20px;
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+
+#auth-form input::placeholder {
+  color: white;
+}
+
+#auth-form input:focus {
+  border-bottom: 2px solid rgb(245, 241, 0);
+}
+
+#auth-form button {
+    
+}
