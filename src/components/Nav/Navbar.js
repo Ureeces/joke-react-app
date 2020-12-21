@@ -55,7 +55,7 @@ const Navbar = () => {
         <li className="nav-item">
           <Link to="/joke">MAKE ME LAUGH</Link>
         </li>
-        <li className="nav-item">
+        <li className="nav-item" style={{ alignSelf: "flex-end" }}>
           <Link exact to={navLinkPathOne}>
             {navLinkDisplayOne}
           </Link>

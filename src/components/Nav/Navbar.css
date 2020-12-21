@@ -6,6 +6,7 @@
 #nav-container {
   height: 10%;
   padding: 0px;
+  width: 100vw;
   border-bottom: 3.5px solid white;
   font-family: "UT-DTM-Mono";
   margin-bottom: 10px;

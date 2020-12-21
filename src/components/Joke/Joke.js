@@ -41,6 +41,7 @@ const Joke = () => {
       {isTwoParter ? setup : ""}
       <p>{joke}</p>
       <button onClick={fetchJoke}>Get Joke</button>
+      <button>Favorite</button>
     </div>
   );
 };

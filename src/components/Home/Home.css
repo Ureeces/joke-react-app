@@ -1,0 +1,8 @@
+#home-container p {
+  size: 4pt;
+}
+
+#creds {
+  position: fixed;
+  bottom: 0;
+}
