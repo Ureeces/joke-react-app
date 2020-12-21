@@ -8,6 +8,7 @@ import "./App.css";
 
 const Home = lazy(() => import("./components/Home/Home"));
 const Auth = lazy(() => import("./components/Auth/Auth"));
+const Joke = lazy(() => import("./components/Joke/Joke"));
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Suspense fallback={Spinner}>
           <Route exact path="/sign-in" component={Auth} />
           <Route exact path="/sign-up" component={Auth} />
+          <Route exact path="/joke" component={Joke} />
           <Route exact path="/home" component={Home} />
         </Suspense>
       </Switch>

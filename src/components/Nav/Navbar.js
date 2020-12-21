@@ -11,10 +11,10 @@ const Navbar = () => {
     <div id="nav-container">
       <ul className="navbar">
         <li className="nav-item">
-          <Link to="/sign-in">Login</Link>
+          <Link to="/sign-in">LOGIN</Link>
         </li>
         <li className="nav-item">
-          <Link to="/sign-up">Register</Link>
+          <Link to="/sign-up">REGISTER</Link>
         </li>
       </ul>
     </div>

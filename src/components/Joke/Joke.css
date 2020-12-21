@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "UT-Comic-Sans";
+  src: url("../../assets/fonts/Comic\ Sans\ UT.ttf");
+}
+
+#joke-container {
+  font-family: "UT-Comic-Sans";
+}
